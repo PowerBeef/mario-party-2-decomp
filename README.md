@@ -2,6 +2,8 @@
 
 From-scratch reverse-engineering project for Mario Party 2 (N64, `NMWE`).
 
+**Repository:** https://github.com/PowerBeef/mario-party-2-decomp
+
 ## Requirements
 
 - Python 3.11+
