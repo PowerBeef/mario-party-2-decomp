@@ -1,0 +1,1429 @@
+name: Marioparty2 (North America)
+sha1: 166eda1c05670d337e2c3f15a5db528ae1e5d6e3
+options:
+  basename: marioparty2
+  target_path: baserom.us.z64
+  base_path: .
+  compiler: GCC
+  find_file_boundaries: True
+  header_encoding: ASCII
+  platform: n64
+  symbol_name_format: $VRAM_$ROM
+  symbol_name_format_no_rom: $VRAM
+  undefined_funcs_auto_path: undefined_funcs_auto.txt
+  undefined_syms_auto_path: undefined_syms_auto.txt
+  symbol_addrs_path: symbol_addrs.txt
+  asm_path: asm
+  src_path: src
+  build_path: build
+  asm_function_macro: glabel
+  asm_jtbl_label_macro: jlabel
+  asm_data_macro: dlabel
+  migrate_rodata_to_functions: True
+  subalign: 8
+  use_legacy_include_asm: False
+  asm_inc_header: "\t.set noat\n\t.set noreorder\n"
+segments:
+  - name: header
+    type: header
+    start: 0x0
+  - name: boot
+    type: bin
+    start: 0x40
+  - name: entry
+    type: code
+    start: 0x1000
+    vram: 0x80000400
+    subsegments:
+      - [0x1000, hasm, entrypoint]
+  - name: main
+    type: code
+    start: 0x1060
+    vram: 0x80000460
+    follows_vram: entry
+    bss_size: 0x2DC10
+    subsegments:
+      - [0x1060, asm]
+      - {0xD57F0, type: bss, vram: 0x800D4BF0, name: globalBSS }
+  - type: code
+    start: 0xD57F0
+    vram: 0x80102800
+    dir: overlays/ovl_00_Debug
+    name: Debug
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3650
+    subsegments:
+      - [0xD57F0, asm]
+      - {0xDA290, type: bss, vram: 0x80105E50, name: ovl_00_bss}
+  - type: code
+    start: 0xDA290
+    vram: 0x80102800
+    dir: overlays/ovl_01_BowserSlots
+    name: BowserSlots
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x8EB0
+    subsegments:
+      - [0xDA290, asm]
+      - {0xE3A40, type: bss, vram: 0x8010B6B0, name: ovl_01_bss}
+  - type: code
+    start: 0xE3A40
+    vram: 0x80102800
+    dir: overlays/ovl_02_RollOutTheBarrels
+    name: RollOutTheBarrels
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xF8A0
+    subsegments:
+      - [0xE3A40, asm]
+      - {0xF3F10, type: bss, vram: 0x801120A0, name: ovl_02_bss}
+  - type: code
+    start: 0xF3F10
+    vram: 0x80102800
+    dir: overlays/ovl_03_CoffinCongestion
+    name: CoffinCongestion
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3E00
+    subsegments:
+      - [0xF3F10, asm]
+      - {0xF84C0, type: bss, vram: 0x80106600, name: ovl_03_bss}
+  - type: code
+    start: 0xF84C0
+    vram: 0x80102800
+    dir: overlays/ovl_04_HammerSlammer
+    name: HammerSlammer
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6830
+    subsegments:
+      - [0xF84C0, asm]
+      - {0xFF7E0, type: bss, vram: 0x80109030, name: ovl_04_bss}
+  - type: code
+    start: 0xFF7E0
+    vram: 0x80102800
+    dir: overlays/ovl_05_GiveMeABrake
+    name: GiveMeABrake
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5FB0
+    subsegments:
+      - [0xFF7E0, asm]
+      - {0x105FC0, type: bss, vram: 0x801087B0, name: ovl_05_bss}
+  - type: code
+    start: 0x105FC0
+    vram: 0x80102800
+    dir: overlays/ovl_06_MalletGoRound
+    name: MalletGoRound
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5C50
+    subsegments:
+      - [0x105FC0, asm]
+      - {0x10BE10, type: bss, vram: 0x80108450, name: ovl_06_bss}
+  - type: code
+    start: 0x10BE10
+    vram: 0x80102800
+    dir: overlays/ovl_07_GrabBag
+    name: GrabBag
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7B00
+    subsegments:
+      - [0x10BE10, asm]
+      - {0x113C80, type: bss, vram: 0x8010A300, name: ovl_07_bss}
+  - type: code
+    start: 0x113C80
+    vram: 0x80102800
+    dir: overlays/ovl_08_LavaTileIsle
+    name: LavaTileIsle
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x79B0
+    subsegments:
+      - [0x113C80, asm]
+      - {0x11B910, type: bss, vram: 0x8010A1B0, name: ovl_08_bss}
+  - type: code
+    start: 0x11B910
+    vram: 0x80102800
+    dir: overlays/ovl_09_BumperBalloonCars
+    name: BumperBalloonCars
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5D20
+    subsegments:
+      - [0x11B910, asm]
+      - {0x121740, type: bss, vram: 0x80108520, name: ovl_09_bss}
+  - type: code
+    start: 0x121740
+    vram: 0x80102800
+    dir: overlays/ovl_0A_RakinEmIn
+    name: RakinEmIn
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x44C0
+    subsegments:
+      - [0x121740, asm]
+      - {0x125FE0, type: bss, vram: 0x80106CC0, name: ovl_0A_bss}
+  - type: code
+    start: 0x125FE0
+    vram: 0x80102800
+    dir: overlays/ovl_0B_DayAtTheRaces
+    name: DayAtTheRaces
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7860
+    subsegments:
+      - [0x125FE0, asm]
+      - {0x12E3F0, type: bss, vram: 0x8010A060, name: ovl_0B_bss}
+  - type: code
+    start: 0x12E3F0
+    vram: 0x80102800
+    dir: overlays/ovl_0C_HotRopeJump
+    name: HotRopeJump
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x9910
+    subsegments:
+      - [0x12E3F0, asm]
+      - {0x138530, type: bss, vram: 0x8010C110, name: ovl_0C_bss}
+  - type: code
+    start: 0x138530
+    vram: 0x80102800
+    dir: overlays/ovl_0D_HotBobOmb
+    name: HotBobOmb
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4310
+    subsegments:
+      - [0x138530, asm]
+      - {0x13CB90, type: bss, vram: 0x80106B10, name: ovl_0D_bss}
+  - type: code
+    start: 0x13CB90
+    vram: 0x80102800
+    dir: overlays/ovl_0E_BowlOver
+    name: BowlOver
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7160
+    subsegments:
+      - [0x13CB90, asm]
+      - {0x144190, type: bss, vram: 0x80109960, name: ovl_0E_bss}
+  - type: code
+    start: 0x144190
+    vram: 0x80102800
+    dir: overlays/ovl_0F_RainbowRun
+    name: RainbowRun
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7EF0
+    subsegments:
+      - [0x144190, asm]
+      - {0x14C320, type: bss, vram: 0x8010A6F0, name: ovl_0F_bss}
+  - type: code
+    start: 0x14C320
+    vram: 0x80102800
+    dir: overlays/ovl_10_CraneGame
+    name: CraneGame
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x8F60
+    subsegments:
+      - [0x14C320, asm]
+      - {0x155C90, type: bss, vram: 0x8010B760, name: ovl_10_bss}
+  - type: code
+    start: 0x155C90
+    vram: 0x80102800
+    dir: overlays/ovl_11_MoveToTheMusic
+    name: MoveToTheMusic
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xA3D0
+    subsegments:
+      - [0x155C90, asm]
+      - {0x160B20, type: bss, vram: 0x8010CBD0, name: ovl_11_bss}
+  - type: code
+    start: 0x160B20
+    vram: 0x80102800
+    dir: overlays/ovl_12_BobOmbBarrage
+    name: BobOmbBarrage
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6540
+    subsegments:
+      - [0x160B20, asm]
+      - {0x1675A0, type: bss, vram: 0x80108D40, name: ovl_12_bss}
+  - type: code
+    start: 0x1675A0
+    vram: 0x80102800
+    dir: overlays/ovl_13_LookAway
+    name: LookAway
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3EF0
+    subsegments:
+      - [0x1675A0, asm]
+      - {0x16B740, type: bss, vram: 0x801066F0, name: ovl_13_bss}
+  - type: code
+    start: 0x16B740
+    vram: 0x80102800
+    dir: overlays/ovl_14_ShockDropRoll
+    name: ShockDropRoll
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x46D0
+    subsegments:
+      - [0x16B740, asm]
+      - {0x170190, type: bss, vram: 0x80106ED0, name: ovl_14_bss}
+  - type: code
+    start: 0x170190
+    vram: 0x80102800
+    dir: overlays/ovl_15_LightsOut
+    name: LightsOut
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x9A00
+    subsegments:
+      - [0x170190, asm]
+      - {0x17A5B0, type: bss, vram: 0x8010C200, name: ovl_15_bss}
+  - type: code
+    start: 0x17A5B0
+    vram: 0x80102800
+    dir: overlays/ovl_16_FiletRelay
+    name: FiletRelay
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6470
+    subsegments:
+      - [0x17A5B0, asm]
+      - {0x181420, type: bss, vram: 0x80108C70, name: ovl_16_bss}
+  - type: code
+    start: 0x181420
+    vram: 0x80102800
+    dir: overlays/ovl_17_ArcherAttack
+    name: ArcherAttack
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4B90
+    subsegments:
+      - [0x181420, asm]
+      - {0x186490, type: bss, vram: 0x80107390, name: ovl_17_bss}
+  - type: code
+    start: 0x186490
+    vram: 0x80102800
+    dir: overlays/ovl_18_ToadtressScramble
+    name: ToadtressScramble
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xA240
+    subsegments:
+      - [0x186490, asm]
+      - {0x1913A0, type: bss, vram: 0x8010CA40, name: ovl_18_bss}
+  - type: code
+    start: 0x1913A0
+    vram: 0x80102800
+    dir: overlays/ovl_19_BobsledRun
+    name: BobsledRun
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x97F0
+    subsegments:
+      - [0x1913A0, asm]
+      - {0x19B590, type: bss, vram: 0x8010BFF0, name: ovl_19_bss}
+  - type: code
+    start: 0x19B590
+    vram: 0x80102800
+    dir: overlays/ovl_1A_HandcarHavoc
+    name: HandcarHavoc
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x8920
+    subsegments:
+      - [0x19B590, asm]
+      - {0x1A40A0, type: bss, vram: 0x8010B120, name: ovl_1A_bss}
+  - type: code
+    start: 0x1A40A0
+    vram: 0x80102800
+    dir: overlays/ovl_1B_BalloonBurst
+    name: BalloonBurst
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7480
+    subsegments:
+      - [0x1A40A0, asm]
+      - {0x1ABE90, type: bss, vram: 0x80109C80, name: ovl_1B_bss}
+  - type: code
+    start: 0x1ABE90
+    vram: 0x80102800
+    dir: overlays/ovl_1C_SkyPilots
+    name: SkyPilots
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x85A0
+    subsegments:
+      - [0x1ABE90, asm]
+      - {0x1B4950, type: bss, vram: 0x8010ADA0, name: ovl_1C_bss}
+  - type: code
+    start: 0x1B4950
+    vram: 0x80102800
+    dir: overlays/ovl_1D_SpeedHikers
+    name: SpeedHikers
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3DE0
+    subsegments:
+      - [0x1B4950, asm]
+      - {0x1B8DF0, type: bss, vram: 0x801065E0, name: ovl_1D_bss}
+  - type: code
+    start: 0x1B8DF0
+    vram: 0x80102800
+    dir: overlays/ovl_1E_HoneycombTreasureHunt
+    name: HoneycombTreasureHunt
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5230
+    subsegments:
+      - [0x1B8DF0, asm]
+      - {0x1BE380, type: bss, vram: 0x80107A30, name: ovl_1E_bss}
+  - type: code
+    start: 0x1BE380
+    vram: 0x80102800
+    dir: overlays/ovl_1F_SlotMachine
+    name: SlotMachine
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7EE0
+    subsegments:
+      - [0x1BE380, asm]
+      - {0x1C6BB0, type: bss, vram: 0x8010A6E0, name: ovl_1F_bss}
+  - type: code
+    start: 0x1C6BB0
+    vram: 0x80102800
+    dir: overlays/ovl_20_MechaMarathon
+    name: MechaMarathon
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x8D50
+    subsegments:
+      - [0x1C6BB0, asm]
+      - {0x1CFB60, type: bss, vram: 0x8010B550, name: ovl_20_bss}
+  - type: code
+    start: 0x1CFB60
+    vram: 0x80102800
+    dir: overlays/ovl_21_RollCall
+    name: RollCall
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6660
+    subsegments:
+      - [0x1CFB60, asm]
+      - {0x1D6EE0, type: bss, vram: 0x80108E60, name: ovl_21_bss}
+  - type: code
+    start: 0x1D6EE0
+    vram: 0x80102800
+    dir: overlays/ovl_22_AbandonShip
+    name: AbandonShip
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xA2E0
+    subsegments:
+      - [0x1D6EE0, asm]
+      - {0x1E1C50, type: bss, vram: 0x8010CAE0, name: ovl_22_bss}
+  - type: code
+    start: 0x1E1C50
+    vram: 0x80102800
+    dir: overlays/ovl_23_PlatformPeril
+    name: PlatformPeril
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6870
+    subsegments:
+      - [0x1E1C50, asm]
+      - {0x1E89B0, type: bss, vram: 0x80109070, name: ovl_23_bss}
+  - type: code
+    start: 0x1E89B0
+    vram: 0x80102800
+    dir: overlays/ovl_24_TotemPolePerturbation
+    name: TotemPolePerturbation
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x8300
+    subsegments:
+      - [0x1E89B0, asm]
+      - {0x1F1540, type: bss, vram: 0x8010AB00, name: ovl_24_bss}
+  - type: code
+    start: 0x1F1540
+    vram: 0x80102800
+    dir: overlays/ovl_25_BumperBallMaze
+    name: BumperBallMaze
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5810
+    subsegments:
+      - [0x1F1540, asm]
+      - {0x1F71A0, type: bss, vram: 0x80108010, name: ovl_25_bss}
+  - type: code
+    start: 0x1F71A0
+    vram: 0x80102800
+    dir: overlays/ovl_26_KarateChop
+    name: KarateChop
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x75C0
+    subsegments:
+      - [0x1F71A0, asm]
+      - {0x1FEE60, type: bss, vram: 0x80109DC0, name: ovl_26_bss}
+  - type: code
+    start: 0x1FEE60
+    vram: 0x80102800
+    dir: overlays/ovl_27_StackingStored
+    name: StackingStored
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6B80
+    subsegments:
+      - [0x1FEE60, asm]
+      - {0x205BA0, type: bss, vram: 0x80109380, name: ovl_27_bss}
+  - type: code
+    start: 0x205BA0
+    vram: 0x80102800
+    dir: overlays/ovl_28_ShuffleAdventure
+    name: ShuffleAdventure
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6840
+    subsegments:
+      - [0x205BA0, asm]
+      - {0x20C750, type: bss, vram: 0x80109040, name: ovl_28_bss}
+  - type: code
+    start: 0x20C750
+    vram: 0x80102800
+    dir: overlays/ovl_29_BobsledRun2P
+    name: BobsledRun2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4470
+    subsegments:
+      - [0x20C750, asm]
+      - {0x2111A0, type: bss, vram: 0x80106C70, name: ovl_29_bss}
+  - type: code
+    start: 0x2111A0
+    vram: 0x80102800
+    dir: overlays/ovl_2A_HandcarHavoc2P
+    name: HandcarHavoc2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x77E0
+    subsegments:
+      - [0x2111A0, asm]
+      - {0x218BF0, type: bss, vram: 0x80109FE0, name: ovl_2A_bss}
+  - type: code
+    start: 0x218BF0
+    vram: 0x80102800
+    dir: overlays/ovl_2B_BalloonBurst2P
+    name: BalloonBurst2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xA490
+    subsegments:
+      - [0x218BF0, asm]
+      - {0x223D30, type: bss, vram: 0x8010CC90, name: ovl_2B_bss}
+  - type: code
+    start: 0x223D30
+    vram: 0x80102800
+    dir: overlays/ovl_2C_SkyPilots2P
+    name: SkyPilots2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5380
+    subsegments:
+      - [0x223D30, asm]
+      - {0x2292D0, type: bss, vram: 0x80107B80, name: ovl_2C_bss}
+  - type: code
+    start: 0x2292D0
+    vram: 0x80102800
+    dir: overlays/ovl_2D_SpeedHikers2P
+    name: SpeedHikers2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4B50
+    subsegments:
+      - [0x2292D0, asm]
+      - {0x22E170, type: bss, vram: 0x80107350, name: ovl_2D_bss}
+  - type: code
+    start: 0x22E170
+    vram: 0x80102800
+    dir: overlays/ovl_2E_CrazyCutter
+    name: CrazyCutter
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3D20
+    subsegments:
+      - [0x22E170, asm]
+      - {0x232150, type: bss, vram: 0x80106520, name: ovl_2E_bss}
+  - type: code
+    start: 0x232150
+    vram: 0x80102800
+    dir: overlays/ovl_2F_BombsAway
+    name: BombsAway
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x62F0
+    subsegments:
+      - [0x232150, asm]
+      - {0x2386E0, type: bss, vram: 0x80108AF0, name: ovl_2F_bss}
+  - type: code
+    start: 0x2386E0
+    vram: 0x80102800
+    dir: overlays/ovl_30_RainbowRun2P
+    name: RainbowRun2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xB5C0
+    subsegments:
+      - [0x2386E0, asm]
+      - {0x246110, type: bss, vram: 0x8010DDC0, name: ovl_30_bss}
+  - type: code
+    start: 0x246110
+    vram: 0x80102800
+    dir: overlays/ovl_31_ConveyorBeltChase
+    name: ConveyorBeltChase
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x75B0
+    subsegments:
+      - [0x246110, asm]
+      - {0x24DE70, type: bss, vram: 0x80109DB0, name: ovl_31_bss}
+  - type: code
+    start: 0x24DE70
+    vram: 0x80102800
+    dir: overlays/ovl_32_TorpedoTargets
+    name: TorpedoTargets
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5AB0
+    subsegments:
+      - [0x24DE70, asm]
+      - {0x253A80, type: bss, vram: 0x801082B0, name: ovl_32_bss}
+  - type: code
+    start: 0x253A80
+    vram: 0x80102800
+    dir: overlays/ovl_33_LuckySeven
+    name: LuckySeven
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5570
+    subsegments:
+      - [0x253A80, asm]
+      - {0x259900, type: bss, vram: 0x80107D70, name: ovl_33_bss}
+  - type: code
+    start: 0x259900
+    vram: 0x80102800
+    dir: overlays/ovl_34_LightUpMyNight
+    name: LightUpMyNight
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xD860
+    subsegments:
+      - [0x259900, asm]
+      - {0x2677B0, type: bss, vram: 0x80110060, name: ovl_34_bss}
+  - type: code
+    start: 0x2677B0
+    vram: 0x80102800
+    dir: overlays/ovl_35_FaceOff
+    name: FaceOff
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x7E10
+    subsegments:
+      - [0x2677B0, asm]
+      - {0x26FEE0, type: bss, vram: 0x8010A610, name: ovl_35_bss}
+  - type: code
+    start: 0x26FEE0
+    vram: 0x80102800
+    dir: overlays/ovl_36_MagnetCarta
+    name: MagnetCarta
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4DD0
+    subsegments:
+      - [0x26FEE0, asm]
+      - {0x274F30, type: bss, vram: 0x801075D0, name: ovl_36_bss}
+  - type: code
+    start: 0x274F30
+    vram: 0x80102800
+    dir: overlays/ovl_37_RollOutTheBarrels2P
+    name: RollOutTheBarrels2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5140
+    subsegments:
+      - [0x274F30, asm]
+      - {0x27A330, type: bss, vram: 0x80107940, name: ovl_37_bss}
+  - type: code
+    start: 0x27A330
+    vram: 0x80102800
+    dir: overlays/ovl_38_CoffinCongestion2P
+    name: CoffinCongestion2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4F70
+    subsegments:
+      - [0x27A330, asm]
+      - {0x27F4F0, type: bss, vram: 0x80107770, name: ovl_38_bss}
+  - type: code
+    start: 0x27F4F0
+    vram: 0x80102800
+    dir: overlays/ovl_39_HammerSlammer2P
+    name: HammerSlammer2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x52D0
+    subsegments:
+      - [0x27F4F0, asm]
+      - {0x284A10, type: bss, vram: 0x80107AD0, name: ovl_39_bss}
+  - type: code
+    start: 0x284A10
+    vram: 0x80102800
+    dir: overlays/ovl_3A_GiveMeABrake2P
+    name: GiveMeABrake2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6A60
+    subsegments:
+      - [0x284A10, asm]
+      - {0x28B620, type: bss, vram: 0x80109260, name: ovl_3A_bss}
+  - type: code
+    start: 0x28B620
+    vram: 0x80102800
+    dir: overlays/ovl_3B_MalletGoRound2P
+    name: MalletGoRound2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5C20
+    subsegments:
+      - [0x28B620, asm]
+      - {0x291870, type: bss, vram: 0x80108420, name: ovl_3B_bss}
+  - type: code
+    start: 0x291870
+    vram: 0x80102800
+    dir: overlays/ovl_3C_GrabBag2P
+    name: GrabBag2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5C20
+    subsegments:
+      - [0x291870, asm]
+      - {0x297890, type: bss, vram: 0x80108420, name: ovl_3C_bss}
+  - type: code
+    start: 0x297890
+    vram: 0x80102800
+    dir: overlays/ovl_3D_LavaTileIsle2P
+    name: LavaTileIsle2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x220
+    subsegments:
+      - [0x297890, asm]
+      - {0x297AD0, type: bss, vram: 0x80102A20, name: ovl_3D_bss}
+  - type: code
+    start: 0x297AD0
+    vram: 0x80102800
+    dir: overlays/ovl_3E_BumperBalloonCars2P
+    name: BumperBalloonCars2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xF120
+    subsegments:
+      - [0x297AD0, asm]
+      - {0x2A89A0, type: bss, vram: 0x80111920, name: ovl_3E_bss}
+  - type: code
+    start: 0x2A89A0
+    vram: 0x80102800
+    dir: overlays/ovl_3F_RakinEmIn2P
+    name: RakinEmIn2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5F30
+    subsegments:
+      - [0x2A89A0, asm]
+      - {0x2AEDB0, type: bss, vram: 0x80108730, name: ovl_3F_bss}
+  - type: code
+    start: 0x2AEDB0
+    vram: 0x80102800
+    dir: overlays/ovl_40_DayAtTheRaces2P
+    name: DayAtTheRaces2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x2140
+    subsegments:
+      - [0x2AEDB0, asm]
+      - {0x2B10C0, type: bss, vram: 0x80104940, name: ovl_40_bss}
+  - type: code
+    start: 0x2B10C0
+    vram: 0x80102800
+    dir: overlays/ovl_41_HotRopeJump2P
+    name: HotRopeJump2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xE230
+    subsegments:
+      - [0x2B10C0, asm]
+      - {0x2C0780, type: bss, vram: 0x80110A30, name: ovl_41_bss}
+  - type: code
+    start: 0x2C0780
+    vram: 0x80102800
+    dir: overlays/ovl_42_HotBobOmb2P
+    name: HotBobOmb2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x70A0
+    subsegments:
+      - [0x2C0780, asm]
+      - {0x2C7CF0, type: bss, vram: 0x801098A0, name: ovl_42_bss}
+  - type: code
+    start: 0x2C7CF0
+    vram: 0x80102800
+    dir: overlays/ovl_43_BowlOver2P
+    name: BowlOver2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x112A0
+    subsegments:
+      - [0x2C7CF0, asm]
+      - {0x2DA8B0, type: bss, vram: 0x80113AA0, name: ovl_43_bss}
+  - type: code
+    start: 0x2DA8B0
+    vram: 0x80102800
+    dir: overlays/ovl_44_RainbowRun4P
+    name: RainbowRun4P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6120
+    subsegments:
+      - [0x2DA8B0, asm]
+      - {0x2E0F30, type: bss, vram: 0x80108920, name: ovl_44_bss}
+  - type: code
+    start: 0x2E0F30
+    vram: 0x80102800
+    dir: overlays/ovl_45_CraneGame2P
+    name: CraneGame2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xE4D0
+    subsegments:
+      - [0x2E0F30, asm]
+      - {0x2F1730, type: bss, vram: 0x80110CD0, name: ovl_45_bss}
+  - type: code
+    start: 0x2F1730
+    vram: 0x80102800
+    dir: overlays/ovl_46_MoveToTheMusic2P
+    name: MoveToTheMusic2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x55D0
+    subsegments:
+      - [0x2F1730, asm]
+      - {0x2F7100, type: bss, vram: 0x80107DD0, name: ovl_46_bss}
+  - type: code
+    start: 0x2F7100
+    vram: 0x80102800
+    dir: overlays/ovl_47_BobOmbBarrage2P
+    name: BobOmbBarrage2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xE150
+    subsegments:
+      - [0x2F7100, asm]
+      - {0x306BA0, type: bss, vram: 0x80110950, name: ovl_47_bss}
+  - type: code
+    start: 0x306BA0
+    vram: 0x80102800
+    dir: overlays/ovl_48_LookAway2P
+    name: LookAway2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5CD0
+    subsegments:
+      - [0x306BA0, asm]
+      - {0x30CCB0, type: bss, vram: 0x801084D0, name: ovl_48_bss}
+  - type: code
+    start: 0x30CCB0
+    vram: 0x80102800
+    dir: overlays/ovl_49_ShockDropRoll2P
+    name: ShockDropRoll2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x103F0
+    subsegments:
+      - [0x30CCB0, asm]
+      - {0x31EE40, type: bss, vram: 0x80112BF0, name: ovl_49_bss}
+  - type: code
+    start: 0x31EE40
+    vram: 0x80102800
+    dir: overlays/ovl_4A_LightsOut2P
+    name: LightsOut2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x6040
+    subsegments:
+      - [0x31EE40, asm]
+      - {0x3252C0, type: bss, vram: 0x80108840, name: ovl_4A_bss}
+  - type: code
+    start: 0x3252C0
+    vram: 0x80102800
+    dir: overlays/ovl_4B_FiletRelay2P
+    name: FiletRelay2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x820
+    subsegments:
+      - [0x3252C0, asm]
+      - {0x325BC0, type: bss, vram: 0x80103020, name: ovl_4B_bss}
+  - type: code
+    start: 0x325BC0
+    vram: 0x80102800
+    dir: overlays/ovl_4C_ArcherAttack2P
+    name: ArcherAttack2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x2CD0
+    subsegments:
+      - [0x325BC0, asm]
+      - {0x328A30, type: bss, vram: 0x801054D0, name: ovl_4C_bss}
+  - type: code
+    start: 0x328A30
+    vram: 0x80102800
+    dir: overlays/ovl_4D_ToadtressScramble2P
+    name: ToadtressScramble2P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x1550
+    subsegments:
+      - [0x328A30, asm]
+      - {0x32A1C0, type: bss, vram: 0x80103D50, name: ovl_4D_bss}
+  - type: code
+    start: 0x32A1C0
+    vram: 0x80102800
+    dir: overlays/ovl_4E_BobsledRun1P
+    name: BobsledRun1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xA9F0
+    subsegments:
+      - [0x32A1C0, asm]
+      - {0x335440, type: bss, vram: 0x8010D1F0, name: ovl_4E_bss}
+  - type: code
+    start: 0x335440
+    vram: 0x80102800
+    dir: overlays/ovl_4F_HandcarHavoc1P
+    name: HandcarHavoc1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xCF50
+    subsegments:
+      - [0x335440, asm]
+      - {0x343060, type: bss, vram: 0x8010F750, name: ovl_4F_bss}
+  - type: code
+    start: 0x343060
+    vram: 0x80102800
+    dir: overlays/ovl_50_BalloonBurst1P
+    name: BalloonBurst1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xF160
+    subsegments:
+      - [0x343060, asm]
+      - {0x352E10, type: bss, vram: 0x80111960, name: ovl_50_bss}
+  - type: code
+    start: 0x352E10
+    vram: 0x80102800
+    dir: overlays/ovl_51_SkyPilots1P
+    name: SkyPilots1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x5BC0
+    subsegments:
+      - [0x352E10, asm]
+      - {0x358DE0, type: bss, vram: 0x801083C0, name: ovl_51_bss}
+  - type: code
+    start: 0x358DE0
+    vram: 0x80102800
+    dir: overlays/ovl_52_SpeedHikers1P
+    name: SpeedHikers1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3FE0
+    subsegments:
+      - [0x358DE0, asm]
+      - {0x35D110, type: bss, vram: 0x801067E0, name: ovl_52_bss}
+  - type: code
+    start: 0x35D110
+    vram: 0x80102800
+    dir: overlays/ovl_53_HoneycombTreasureHunt1P
+    name: HoneycombTreasureHunt1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3360
+    subsegments:
+      - [0x35D110, asm]
+      - {0x360670, type: bss, vram: 0x80105B60, name: ovl_53_bss}
+  - type: code
+    start: 0x360670
+    vram: 0x80102800
+    dir: overlays/ovl_54_SlotMachine1P
+    name: SlotMachine1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xFD0
+    subsegments:
+      - [0x360670, asm]
+      - {0x3616F0, type: bss, vram: 0x801037D0, name: ovl_54_bss}
+  - type: code
+    start: 0x3616F0
+    vram: 0x80102800
+    dir: overlays/ovl_55_MechaMarathon1P
+    name: MechaMarathon1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x8F50
+    subsegments:
+      - [0x3616F0, asm]
+      - {0x36B420, type: bss, vram: 0x8010B750, name: ovl_55_bss}
+  - type: code
+    start: 0x36B420
+    vram: 0x80102800
+    dir: overlays/ovl_56_RollCall1P
+    name: RollCall1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x16C0
+    subsegments:
+      - [0x36B420, asm]
+      - {0x36D9A0, type: bss, vram: 0x80103EC0, name: ovl_56_bss}
+  - type: code
+    start: 0x36D9A0
+    vram: 0x80102800
+    dir: overlays/ovl_57_AbandonShip1P
+    name: AbandonShip1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x530
+    subsegments:
+      - [0x36D9A0, asm]
+      - {0x36DF00, type: bss, vram: 0x80102D30, name: ovl_57_bss}
+  - type: code
+    start: 0x36DF00
+    vram: 0x80102800
+    dir: overlays/ovl_58_PlatformPeril1P
+    name: PlatformPeril1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x10340
+    subsegments:
+      - [0x36DF00, asm]
+      - {0x37EE80, type: bss, vram: 0x80112B40, name: ovl_58_bss}
+  - type: code
+    start: 0x37EE80
+    vram: 0x80102800
+    dir: overlays/ovl_59_TotemPolePerturbation1P
+    name: TotemPolePerturbation1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3B0
+    subsegments:
+      - [0x37EE80, asm]
+      - {0x37F290, type: bss, vram: 0x80102BB0, name: ovl_59_bss}
+  - type: code
+    start: 0x37F290
+    vram: 0x80102800
+    dir: overlays/ovl_5A_BumperBallMaze1P
+    name: BumperBallMaze1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x210
+    subsegments:
+      - [0x37F290, asm]
+      - {0x37F4B0, type: bss, vram: 0x80102A10, name: ovl_5A_bss}
+  - type: code
+    start: 0x37F4B0
+    vram: 0x80102800
+    dir: overlays/ovl_5B_KarateChop1P
+    name: KarateChop1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xFE70
+    subsegments:
+      - [0x37F4B0, asm]
+      - {0x3906C0, type: bss, vram: 0x80112670, name: ovl_5B_bss}
+  - type: code
+    start: 0x3906C0
+    vram: 0x80102800
+    dir: overlays/ovl_5C_StackingStored1P
+    name: StackingStored1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xDED0
+    subsegments:
+      - [0x3906C0, asm]
+      - {0x3A01F0, type: bss, vram: 0x801106D0, name: ovl_5C_bss}
+  - type: code
+    start: 0x3A01F0
+    vram: 0x80102800
+    dir: overlays/ovl_5D_ShuffleAdventure1P
+    name: ShuffleAdventure1P
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x85D0
+    subsegments:
+      - [0x3A01F0, asm]
+      - {0x3A9460, type: bss, vram: 0x8010ADD0, name: ovl_5D_bss}
+  - type: code
+    start: 0x3A9460
+    vram: 0x80102800
+    dir: overlays/ovl_5E_BoardSelect
+    name: BoardSelect
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x2450
+    subsegments:
+      - [0x3A9460, asm]
+      - {0x3AB9A0, type: bss, vram: 0x80104C50, name: ovl_5E_bss}
+  - type: code
+    start: 0x3AB9A0
+    vram: 0x80102800
+    dir: overlays/ovl_5F_BoardMain
+    name: BoardMain
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x10F00
+    subsegments:
+      - [0x3AB9A0, asm]
+      - {0x3BDF60, type: bss, vram: 0x80113700, name: ovl_5F_bss}
+  - type: code
+    start: 0x3BDF60
+    vram: 0x80102800
+    dir: overlays/ovl_60_BoardEvents
+    name: BoardEvents
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x10AA0
+    subsegments:
+      - [0x3BDF60, asm]
+      - {0x3D0050, type: bss, vram: 0x801132A0, name: ovl_60_bss}
+  - type: code
+    start: 0x3D0050
+    vram: 0x80102800
+    dir: overlays/ovl_61_BoardShop
+    name: BoardShop
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4880
+    subsegments:
+      - [0x3D0050, asm]
+      - {0x3D4D20, type: bss, vram: 0x80107080, name: ovl_61_bss}
+  - type: code
+    start: 0x3D4D20
+    vram: 0x80102800
+    dir: overlays/ovl_62_TitleScreenAndIntro
+    name: TitleScreenAndIntro
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xE810
+    subsegments:
+      - [0x3D4D20, asm]
+      - {0x3E4250, type: bss, vram: 0x80111010, name: ovl_62_bss}
+  - type: code
+    start: 0x3E4250
+    vram: 0x80102800
+    dir: overlays/ovl_63_MainMenu
+    name: MainMenu
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xB0
+    subsegments:
+      - [0x3E4250, asm]
+      - {0x3E4320, type: bss, vram: 0x801028B0, name: ovl_63_bss}
+  - type: code
+    start: 0x3E4320
+    vram: 0x80102800
+    dir: overlays/ovl_64_GameSetup
+    name: GameSetup
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3990
+    subsegments:
+      - [0x3E4320, asm]
+      - {0x3E7ED0, type: bss, vram: 0x80106190, name: ovl_64_bss}
+  - type: code
+    start: 0x3E7ED0
+    vram: 0x80102800
+    dir: overlays/ovl_65_MinigameLand
+    name: MinigameLand
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3AB0
+    subsegments:
+      - [0x3E7ED0, asm]
+      - {0x3EBBB0, type: bss, vram: 0x801062B0, name: ovl_65_bss}
+  - type: code
+    start: 0x3EBBB0
+    vram: 0x80102800
+    dir: overlays/ovl_66_BattleMinigame
+    name: BattleMinigame
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x39F0
+    subsegments:
+      - [0x3EBBB0, asm]
+      - {0x3EF7F0, type: bss, vram: 0x801061F0, name: ovl_66_bss}
+  - type: code
+    start: 0x3EF7F0
+    vram: 0x80102800
+    dir: overlays/ovl_67_StoryMode
+    name: StoryMode
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x39C0
+    subsegments:
+      - [0x3EF7F0, asm]
+      - {0x3F33E0, type: bss, vram: 0x801061C0, name: ovl_67_bss}
+  - type: code
+    start: 0x3F33E0
+    vram: 0x80102800
+    dir: overlays/ovl_68_OptionsMenu
+    name: OptionsMenu
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3B00
+    subsegments:
+      - [0x3F33E0, asm]
+      - {0x3F7130, type: bss, vram: 0x80106300, name: ovl_68_bss}
+  - type: code
+    start: 0x3F7130
+    vram: 0x80102800
+    dir: overlays/ovl_69_SaveLoad
+    name: SaveLoad
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3A90
+    subsegments:
+      - [0x3F7130, asm]
+      - {0x3FAE40, type: bss, vram: 0x80106290, name: ovl_69_bss}
+  - type: code
+    start: 0x3FAE40
+    vram: 0x80102800
+    dir: overlays/ovl_6A_BoardIntro
+    name: BoardIntro
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3A10
+    subsegments:
+      - [0x3FAE40, asm]
+      - {0x3FEAA0, type: bss, vram: 0x80106210, name: ovl_6A_bss}
+  - type: code
+    start: 0x3FEAA0
+    vram: 0x80102800
+    dir: overlays/ovl_6B_MinigameInstructions
+    name: MinigameInstructions
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3A10
+    subsegments:
+      - [0x3FEAA0, asm]
+      - {0x402700, type: bss, vram: 0x80106210, name: ovl_6B_bss}
+  - type: code
+    start: 0x402700
+    vram: 0x80102800
+    dir: overlays/ovl_6C_MinigameSelect
+    name: MinigameSelect
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3D60
+    subsegments:
+      - [0x402700, asm]
+      - {0x406640, type: bss, vram: 0x80106560, name: ovl_6C_bss}
+  - type: code
+    start: 0x406640
+    vram: 0x80102800
+    dir: overlays/ovl_6D_FinalMinigameCoaster
+    name: FinalMinigameCoaster
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x3A40
+    subsegments:
+      - [0x406640, asm]
+      - {0x40A330, type: bss, vram: 0x80106240, name: ovl_6D_bss}
+  - type: code
+    start: 0x40A330
+    vram: 0x80102800
+    dir: overlays/ovl_6E_MinigameCoaster
+    name: MinigameCoaster
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x1600
+    subsegments:
+      - [0x40A330, asm]
+      - {0x40BB00, type: bss, vram: 0x80103E00, name: ovl_6E_bss}
+  - type: code
+    start: 0x40BB00
+    vram: 0x80102800
+    dir: overlays/ovl_6F_BattleResults
+    name: BattleResults
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x2F00
+    subsegments:
+      - [0x40BB00, asm]
+      - {0x40EC60, type: bss, vram: 0x80105700, name: ovl_6F_bss}
+  - type: code
+    start: 0x40EC60
+    vram: 0x80102800
+    dir: overlays/ovl_70_Results
+    name: Results
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x4EA0
+    subsegments:
+      - [0x40EC60, asm]
+      - {0x413C90, type: bss, vram: 0x801076A0, name: ovl_70_bss}
+  - type: code
+    start: 0x413C90
+    vram: 0x80102800
+    dir: overlays/ovl_71_MsgTest
+    name: MsgTest
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0xE70
+    subsegments:
+      - [0x413C90, asm]
+      - {0x415790, type: bss, vram: 0x80103670, name: ovl_71_bss}
+  - type: code
+    start: 0x415790
+    vram: 0x80102800
+    dir: overlays/ovl_72_Credits
+    name: Credits
+    overlay: True
+    exclusive_ram_id: minigame
+    symbol_name_format: $VRAM_$ROM_$SEG
+    bss_size: 0x2680
+    subsegments:
+      - [0x415790, asm]
+      - {0x418A50, type: bss, vram: 0x80104E80, name: ovl_72_bss}
+  - [0x418A50, bin]
+  - [0x2000000]

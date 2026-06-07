@@ -1,0 +1,16 @@
+name: Mario Party 2
+repo: https://github.com/mariopartyrd/marioparty2
+platform: n64
+versions:
+- name: us
+  fullname: US
+  sha1: 166eda1c05670d337e2c3f15a5db528ae1e5d6e3
+  paths:
+    target: marioparty2.z64
+    build_dir: build
+    map: build/marioparty2.map
+    compiled_target: build/marioparty2.z64
+    elf: build/marioparty2.elf
+    expected_dir: expected/
+    asm: asm
+    nonmatchings: asm/nonmatchings

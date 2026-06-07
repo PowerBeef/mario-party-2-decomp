@@ -1,0 +1,31 @@
+# Retail ROM — user must supply their own copy
+*.z64
+*.n64
+*.v64
+baserom*.z64
+
+# Build artifacts
+build/
+venv/
+__pycache__/
+*.pyc
+*.o
+*.a
+*.elf
+*.map
+
+# Splat auto-generated
+undefined_funcs_auto.txt
+undefined_syms_auto.txt
+*.ld
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Expected ROM chunks (generated locally)
+expected/
+
+# Splat-extracted ROM bins (regenerate with `make split`)
+assets/

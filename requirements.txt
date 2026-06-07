@@ -1,0 +1,8 @@
+splat64>=0.41.0
+spimdisasm>=1.41.0
+rabbitizer>=1.16.0
+pyyaml>=6.0
+capstone>=5.0
+n64img>=0.3.0
+crunch64>=0.6.0
+pygfxd>=1.0.5
