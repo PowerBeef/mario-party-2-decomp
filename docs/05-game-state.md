@@ -54,4 +54,4 @@ stateDiagram-v2
 
 ## Save Integration
 
-Subset of `GW_PLAYER` and `GW_SYSTEM` fields serialize to EEPROM — see [10-input-and-save.md](10-input-and-save.md) and [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md).
+Subset of `GW_PLAYER` and `GW_SYSTEM` fields serialize to EEPROM — see [10-input-and-save.md](10-input-and-save.md), [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md), and [hardware/27-eeprom-save-byte-layout.md](hardware/27-eeprom-save-byte-layout.md).

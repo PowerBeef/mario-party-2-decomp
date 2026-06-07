@@ -123,8 +123,13 @@ All 115 overlays share the **same VRAM text address** — only one resident at a
 
 Beyond code overlays, PI DMA also pulls compressed files from the asset region (ROM `0x418A50+`). `ReadMainFS` / `HuMemDirectMalloc` paths decompress into RDRAM heaps — same PI hardware, different ROM offsets.
 
+## SDK Dead Code (64DD / Leo)
+
+The ROM links **Leo (64DD disk drive)** libultra symbols but MP2 is cartridge-only — **6** Leo `jal`s in main, no gameplay dependency. See [31-unused-libultra-leo-64dd.md](31-unused-libultra-leo-64dd.md). **Expansion Pak (8 MB)** is not used; see [02-memory-map.md](02-memory-map.md).
+
 ## Related Docs
 
+- [31-unused-libultra-leo-64dd.md](31-unused-libultra-leo-64dd.md) — Leo/64DD and Expansion Pak
 - [02-memory-map.md](02-memory-map.md) — Overlay window and table
 - [01-vr4300-cpu.md](01-vr4300-cpu.md) — Cache ops after DMA
 - [../02-boot-and-init.md](../02-boot-and-init.md) — Engine init order

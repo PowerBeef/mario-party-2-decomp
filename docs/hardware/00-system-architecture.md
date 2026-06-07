@@ -138,3 +138,13 @@ See [02-memory-map.md](02-memory-map.md) for virtual addresses and [03-boot-and-
 | [audio-call-inventory.md](audio-call-inventory.md) | libaudio call counts (auto-generated) |
 | [cpu-call-inventory.md](cpu-call-inventory.md) | OS and engine CPU call counts (auto-generated) |
 | [input-save-call-inventory.md](input-save-call-inventory.md) | Input/save call counts (auto-generated) |
+| [23-asset-pipeline-overview.md](23-asset-pipeline-overview.md) | Asset pipeline ROM → GPU |
+| [24-hvq-and-compression.md](24-hvq-and-compression.md) | HVQ / compression |
+| [25-mainfs-form-mtnx.md](25-mainfs-form-mtnx.md) | MainFS, FORM, MTNX |
+| [26-board-decision-tree-vm.md](26-board-decision-tree-vm.md) | Board scripting VM |
+| [27-eeprom-save-byte-layout.md](27-eeprom-save-byte-layout.md) | EEPROM byte layout |
+| [28-text-and-messaging.md](28-text-and-messaging.md) | Text and messages |
+| [29-fade-and-transitions.md](29-fade-and-transitions.md) | Fade transitions |
+| [30-rng-and-game-randomness.md](30-rng-and-game-randomness.md) | PRNG |
+| [31-unused-libultra-leo-64dd.md](31-unused-libultra-leo-64dd.md) | Unused Leo/64DD code |
+| [overlay-call-inventory.md](overlay-call-inventory.md) | Overlay call counts (auto-generated) |

@@ -148,3 +148,4 @@ Runtime party state @ **`0x800F93A8`** (`GwSystem`) and **`0x800FD2C0`** (`gPlay
 | [../10-input-and-save.md](../10-input-and-save.md) | Engine summary |
 | [../05-game-state.md](../05-game-state.md) | `GW_SYSTEM` / `GW_PLAYER` |
 | [input-save-call-inventory.md](input-save-call-inventory.md) | Call counts |
+| [27-eeprom-save-byte-layout.md](27-eeprom-save-byte-layout.md) | Staging buffer byte map |

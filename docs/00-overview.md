@@ -45,6 +45,16 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 | [hardware/audio-call-inventory.md](hardware/audio-call-inventory.md) | libaudio call-site counts (auto-generated) |
 | [hardware/cpu-call-inventory.md](hardware/cpu-call-inventory.md) | CPU/engine call-site counts (auto-generated) |
 | [hardware/input-save-call-inventory.md](hardware/input-save-call-inventory.md) | Input/save call-site counts (auto-generated) |
+| [hardware/23-asset-pipeline-overview.md](hardware/23-asset-pipeline-overview.md) | ROM → MainFS → GPU pipeline |
+| [hardware/24-hvq-and-compression.md](hardware/24-hvq-and-compression.md) | HVQ and compression types |
+| [hardware/25-mainfs-form-mtnx.md](hardware/25-mainfs-form-mtnx.md) | MainFS, FORM, MTNX |
+| [hardware/26-board-decision-tree-vm.md](hardware/26-board-decision-tree-vm.md) | Board event bytecode VM |
+| [hardware/27-eeprom-save-byte-layout.md](hardware/27-eeprom-save-byte-layout.md) | EEPROM byte map |
+| [hardware/28-text-and-messaging.md](hardware/28-text-and-messaging.md) | Text, fonts, ShowMessage |
+| [hardware/29-fade-and-transitions.md](hardware/29-fade-and-transitions.md) | Fade engine (15 types) |
+| [hardware/30-rng-and-game-randomness.md](hardware/30-rng-and-game-randomness.md) | GetRandomByte PRNG |
+| [hardware/31-unused-libultra-leo-64dd.md](hardware/31-unused-libultra-leo-64dd.md) | Leo/64DD dead code, Expansion Pak |
+| [hardware/overlay-call-inventory.md](hardware/overlay-call-inventory.md) | Overlay API call counts (auto-generated) |
 
 ## Subsystem Index
 
@@ -85,4 +95,5 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 - `tools/audio_xref.py` — libaudio API call inventory from `asm/1060.s`
 - `tools/cpu_xref.py` — libultra OS and MP2 CPU engine call inventory
 - `tools/input_save_xref.py` — SI/EEPROM and input/save call inventory
+- `tools/overlay_xref.py` — engine/libultra call inventory across 115 overlays
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly

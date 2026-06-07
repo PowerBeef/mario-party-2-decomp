@@ -5,6 +5,7 @@
 > - [hardware/20-si-controller-hardware.md](hardware/20-si-controller-hardware.md) — PIF, `OSContPad`, rumble
 > - [hardware/21-eeprom-save-hardware.md](hardware/21-eeprom-save-hardware.md) — 4K EEPROM blocks and libultra API
 > - [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md) — Input manager, EEPROM module, checksum
+> - [hardware/27-eeprom-save-byte-layout.md](hardware/27-eeprom-save-byte-layout.md) — Staging buffer byte map
 > - Summary: [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md)
 
 ## Controller Input
@@ -47,7 +48,7 @@ Staging buffer: **`D_800D89F0`** (512 bytes).
 - Records / unlock flags
 - `GW_PLAYER` aggregates for story mode progress
 
-Exact layout requires further RE of the EEPROM module @ `0x8001ACD0`. See [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md).
+Header (8 B) + payload (504 B) layout: [hardware/27-eeprom-save-byte-layout.md](hardware/27-eeprom-save-byte-layout.md). Per-field unlock/record offsets remain partial RE.
 
 ## Checksum
 

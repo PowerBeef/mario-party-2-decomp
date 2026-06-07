@@ -19,6 +19,8 @@ Boards are defined as **chains** of spaces. Each space has:
 | `SetNextChainAndSpace` | `0x8005734C` | Queue movement target |
 | `RunDecisionTree` | `0x80044800` | Branching event scripts |
 
+> **Bytecode VM detail:** [hardware/26-board-decision-tree-vm.md](hardware/26-board-decision-tree-vm.md) — 12-byte nodes, 18 opcodes.
+
 ## Event Hydration
 
 `EventTableHydrate` (`0x8005568C`) copies event table rows into active space data before executing board scripts.

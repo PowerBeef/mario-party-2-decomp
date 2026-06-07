@@ -8,6 +8,8 @@ Mario Party 2 renders with **F3DEX microcode** (GBI 2) plus **GS2DEX** for 2D sp
 > - [hardware/09-rdp-framebuffers-pixel-formats.md](hardware/09-rdp-framebuffers-pixel-formats.md) — TMEM, combiner, blender
 > - [hardware/10-vi-display-modes.md](hardware/10-vi-display-modes.md) — OSViMode, display modes
 > - Summaries: [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md), [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md)
+> - [hardware/29-fade-and-transitions.md](hardware/29-fade-and-transitions.md) — 15 fade types, InitFadeIn/Out
+> - [hardware/28-text-and-messaging.md](hardware/28-text-and-messaging.md) — Message box draw path
 
 ## Pipeline Overview
 

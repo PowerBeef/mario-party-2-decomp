@@ -2,7 +2,12 @@
 
 Most game content lives in the ROM **asset tail** (`0x418A50`–`0x1FFFFFF`, ~27 MB).
 
-> **Audio banks and sequences:** For `.bank` / `.seq` layout and libaudio loading, see [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md).
+> **Hardware deep-dive (asset sub-series):**
+> - [hardware/23-asset-pipeline-overview.md](hardware/23-asset-pipeline-overview.md) — Full ROM → MainFS → GPU pipeline
+> - [hardware/24-hvq-and-compression.md](hardware/24-hvq-and-compression.md) — HVQ and compression dispatch
+> - [hardware/25-mainfs-form-mtnx.md](hardware/25-mainfs-form-mtnx.md) — MainFS layout, FORM/MTNX parsers
+>
+> **Audio banks and sequences:** [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md).
 
 ## MainFS
 

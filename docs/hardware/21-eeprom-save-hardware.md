@@ -65,7 +65,7 @@ MP2 typical sizes from [`asm/1060.s`](../../asm/1060.s):
 +0x200  (end)
 ```
 
-Exact field layout is engine-defined — see [22-mp2-input-save-engine.md](22-mp2-input-save-engine.md). libultra only sees opaque bytes.
+Exact field layout is engine-defined — see [27-eeprom-save-byte-layout.md](27-eeprom-save-byte-layout.md) and [22-mp2-input-save-engine.md](22-mp2-input-save-engine.md). libultra only sees opaque bytes.
 
 ## Checksum (Software Layer)
 
