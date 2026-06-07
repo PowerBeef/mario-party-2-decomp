@@ -96,6 +96,9 @@ The RSP reads RDRAM **without** seeing CPU D-cache. Every display-list build mus
 
 ## Related Docs
 
+- [07-graphics-pipeline-overview.md](07-graphics-pipeline-overview.md) — Full end-to-end graphics flow
+- [08-gbi-rsp-microcode.md](08-gbi-rsp-microcode.md) — GBI commands and RSP detail
+- [09-rdp-framebuffers-pixel-formats.md](09-rdp-framebuffers-pixel-formats.md) — RDP rasterization
 - [05-video-and-audio-io.md](05-video-and-audio-io.md) — VI swap and timing
 - [01-vr4300-cpu.md](01-vr4300-cpu.md) — Cache operations
 - [../08-rendering.md](../08-rendering.md) — Engine render API

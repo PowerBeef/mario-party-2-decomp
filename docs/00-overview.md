@@ -22,9 +22,13 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 | [hardware/01-vr4300-cpu.md](hardware/01-vr4300-cpu.md) | VR4300, caches, TLB, delay slots |
 | [hardware/02-memory-map.md](hardware/02-memory-map.md) | KSEG0 RDRAM layout, overlay window |
 | [hardware/03-boot-and-cartridge.md](hardware/03-boot-and-cartridge.md) | PIF, IPL, PI DMA |
-| [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md) | RSP/RDP, F3DEX/GS2DEX |
+| [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md) | RSP/RDP summary |
 | [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md) | VI retrace, AI PCM |
 | [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md) | SI, EEPROM, IRQ model |
+| [hardware/07-graphics-pipeline-overview.md](hardware/07-graphics-pipeline-overview.md) | Full graphics pipeline |
+| [hardware/08-gbi-rsp-microcode.md](hardware/08-gbi-rsp-microcode.md) | GBI, RSP microcode |
+| [hardware/09-rdp-framebuffers-pixel-formats.md](hardware/09-rdp-framebuffers-pixel-formats.md) | RDP, pixel formats |
+| [hardware/10-vi-display-modes.md](hardware/10-vi-display-modes.md) | Display modes, OSViMode |
 | [hardware/call-inventory.md](hardware/call-inventory.md) | libultra call-site counts (auto-generated) |
 
 ## Subsystem Index
@@ -62,4 +66,5 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 - `tools/sym_converter.py` — imports PartyPlanner64 `.sym` names into `symbol_addrs.txt`
 - `tools/verify_rom.py` — validates segment coverage and baserom SHA1
 - `tools/hardware_xref.py` — libultra hardware API call inventory from `asm/1060.s`
+- `tools/dump_vi_modes.py` — MP2 OSViMode table dump for doc 10
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly

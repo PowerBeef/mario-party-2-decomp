@@ -2,7 +2,12 @@
 
 Mario Party 2 renders with **F3DEX microcode** (GBI 2) plus **GS2DEX** for 2D sprites and backgrounds.
 
-> **Hardware deep-dive:** RSP task protocol, RDP rasterization, cache writeback before `osSpTaskStartGo` — [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md). VI framebuffer swap and retrace — [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md).
+> **Hardware deep-dive (graphics sub-series):**
+> - [hardware/07-graphics-pipeline-overview.md](hardware/07-graphics-pipeline-overview.md) — Full pipeline and MP2 frame timeline
+> - [hardware/08-gbi-rsp-microcode.md](hardware/08-gbi-rsp-microcode.md) — GBI 2, F3DEX2/GS2DEX2, OSTask
+> - [hardware/09-rdp-framebuffers-pixel-formats.md](hardware/09-rdp-framebuffers-pixel-formats.md) — TMEM, combiner, blender
+> - [hardware/10-vi-display-modes.md](hardware/10-vi-display-modes.md) — OSViMode, display modes
+> - Summaries: [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md), [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md)
 
 ## Pipeline Overview
 

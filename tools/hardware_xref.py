@@ -29,11 +29,9 @@ SUBSYSTEMS: dict[str, list[str]] = {
         "osProbeTLB",
     ],
     "RSP (SP)": [
-        "osSpTaskLoad",
-        "osSpTaskStartGo",
-        "osSpTaskYield",
-        "osSpTaskYielded",
         "osSpRawStartDma",
+        "osSpGetStatus",
+        "osSpSetStatus",
     ],
     "Video (VI)": [
         "osViSetMode",
@@ -42,6 +40,16 @@ SUBSYSTEMS: dict[str, list[str]] = {
         "osViBlack",
         "osViGetCurrentFramebuffer",
         "osViSetYScale",
+        "osViSetXScale",
+        "osViSetSpecialFeatures",
+    ],
+    "Graphics (RCP submit)": [
+        "osSpTaskLoad",
+        "osSpTaskStartGo",
+        "osSpTaskYield",
+        "osSpTaskYielded",
+        "osWritebackDCacheAll",
+        "osWritebackDCache",
     ],
     "Audio (AI)": [
         "osAiSetNextBuffer",

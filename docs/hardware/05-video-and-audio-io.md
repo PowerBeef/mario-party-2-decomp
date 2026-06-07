@@ -87,7 +87,8 @@ See [06-serial-save-interrupts.md](06-serial-save-interrupts.md) for the full in
 
 ## Related Docs
 
-- [00-system-architecture.md](00-system-architecture.md) — Per-frame timeline
+- [10-vi-display-modes.md](10-vi-display-modes.md) — Exhaustive OSViMode and NTSC/PAL reference
+- [07-graphics-pipeline-overview.md](07-graphics-pipeline-overview.md) — Per-frame timeline
 - [04-rcp-rsp-rdp.md](04-rcp-rsp-rdp.md) — Framebuffer production
 - [../08-rendering.md](../08-rendering.md) — Engine graphics
 - [../09-audio.md](../09-audio.md) — PlaySound / PlayMusic API

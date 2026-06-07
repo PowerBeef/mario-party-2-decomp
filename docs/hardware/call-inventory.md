@@ -30,11 +30,9 @@ Call counts are `jal` sites in [`asm/1060.s`](../asm/1060.s) only.
 
 | Function | VRAM | Calls in main |
 |----------|------|---------------|
-| `osSpTaskLoad` | `0x800A5C0C` | 0 |
-| `osSpTaskStartGo` | `0x800A5BE0` | 3 |
-| `osSpTaskYield` | `0x800A5E20` | 1 |
-| `osSpTaskYielded` | `0x800A5E40` | 1 |
 | `osSpRawStartDma` | `0x800ADE00` | 2 |
+| `osSpGetStatus` | `0x800ADDB0` | 1 |
+| `osSpSetStatus` | `0x800ADDC0` | 3 |
 
 ### Video (VI)
 
@@ -46,6 +44,18 @@ Call counts are `jal` sites in [`asm/1060.s`](../asm/1060.s) only.
 | `osViBlack` | `0x800A73C0` | 4 |
 | `osViGetCurrentFramebuffer` | `0x800A6A30` | 1 |
 | `osViSetYScale` | `0x800A7010` | 4 |
+| `osViSetSpecialFeatures` | `0x800A6EA0` | 1 |
+
+### Graphics (RCP submit)
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `osSpTaskLoad` | `0x800A5C0C` | 0 |
+| `osSpTaskStartGo` | `0x800A5BE0` | 3 |
+| `osSpTaskYield` | `0x800A5E20` | 1 |
+| `osSpTaskYielded` | `0x800A5E40` | 1 |
+| `osWritebackDCacheAll` | `0x800A1EF0` | 6 |
+| `osWritebackDCache` | `0x800A1E70` | 7 |
 
 ### Audio (AI)
 

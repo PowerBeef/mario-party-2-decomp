@@ -115,7 +115,11 @@ See [02-memory-map.md](02-memory-map.md) for virtual addresses and [03-boot-and-
 | [01-vr4300-cpu.md](01-vr4300-cpu.md) | MIPS CPU, caches, TLB, delay slots |
 | [02-memory-map.md](02-memory-map.md) | KSEG0/KSEG1, RDRAM layout, overlay window |
 | [03-boot-and-cartridge.md](03-boot-and-cartridge.md) | PIF, IPL, PI DMA, overlay loading |
-| [04-rcp-rsp-rdp.md](04-rcp-rsp-rdp.md) | Graphics coprocessor pipeline |
-| [05-video-and-audio-io.md](05-video-and-audio-io.md) | VI and AI |
+| [04-rcp-rsp-rdp.md](04-rcp-rsp-rdp.md) | Graphics coprocessor pipeline (summary) |
+| [05-video-and-audio-io.md](05-video-and-audio-io.md) | VI and AI (summary) |
 | [06-serial-save-interrupts.md](06-serial-save-interrupts.md) | SI, EEPROM, interrupts |
+| [07-graphics-pipeline-overview.md](07-graphics-pipeline-overview.md) | Full graphics pipeline, frame timeline |
+| [08-gbi-rsp-microcode.md](08-gbi-rsp-microcode.md) | GBI commands, RSP microcode |
+| [09-rdp-framebuffers-pixel-formats.md](09-rdp-framebuffers-pixel-formats.md) | RDP, TMEM, pixel formats |
+| [10-vi-display-modes.md](10-vi-display-modes.md) | OSViMode, NTSC/PAL, display modes |
 | [call-inventory.md](call-inventory.md) | libultra call counts in main segment |
