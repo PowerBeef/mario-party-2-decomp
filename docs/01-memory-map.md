@@ -1,6 +1,6 @@
 # Memory Map
 
-> **Runtime RDRAM / KSEG0:** For physical memory regions, TLB, and overlay VRAM anchors, see [hardware/02-memory-map.md](hardware/02-memory-map.md).
+> **Runtime RDRAM / KSEG0:** For physical memory regions, TLB, heaps, and overlay VRAM anchors, see [hardware/02-memory-map.md](hardware/02-memory-map.md) and [hardware/17-memory-heaps-dma-coherency.md](hardware/17-memory-heaps-dma-coherency.md).
 
 ## ROM Layout (32 MB)
 

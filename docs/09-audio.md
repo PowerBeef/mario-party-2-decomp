@@ -1,13 +1,20 @@
 # Audio
 
-Audio combines **sequenced music** (libultra audio driver) with **sample SFX** and **character voice** layers.
+Audio combines **sequenced music** (libaudio sequence player) with **sample SFX** and **character voice** layers.
+
+> **Hardware deep-dive (audio sub-series):**
+> - [hardware/11-audio-pipeline-overview.md](hardware/11-audio-pipeline-overview.md) — Full pipeline and MP2 layers
+> - [hardware/12-ai-hardware-and-aspMain.md](hardware/12-ai-hardware-and-aspMain.md) — AI DMA, aspMain RSP ucode
+> - [hardware/13-libaudio-library.md](hardware/13-libaudio-library.md) — alSyn, alSeqp, alSndp, processing graph
+> - [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md) — PlaySound path, music, ROM banks
+> - Summary: [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md)
 
 ## Key Functions
 
 | Function | VRAM | Role |
 |----------|------|------|
 | `PlaySound` | `0x80014B14` | Generic SFX by index |
-| `PlayMusic` | — | Background music track |
+| `func_8000F744` | `0x8000F744` | Background music track (PlayMusic candidate) |
 | `PlayCharacterSound` | `0x8007975C` | Character voice (non-overlapping) |
 
 ## Character Voice Rule

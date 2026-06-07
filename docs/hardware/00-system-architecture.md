@@ -122,4 +122,14 @@ See [02-memory-map.md](02-memory-map.md) for virtual addresses and [03-boot-and-
 | [08-gbi-rsp-microcode.md](08-gbi-rsp-microcode.md) | GBI commands, RSP microcode |
 | [09-rdp-framebuffers-pixel-formats.md](09-rdp-framebuffers-pixel-formats.md) | RDP, TMEM, pixel formats |
 | [10-vi-display-modes.md](10-vi-display-modes.md) | OSViMode, NTSC/PAL, display modes |
+| [11-audio-pipeline-overview.md](11-audio-pipeline-overview.md) | Full audio pipeline |
+| [12-ai-hardware-and-aspMain.md](12-ai-hardware-and-aspMain.md) | AI DMA, aspMain RSP ucode |
+| [13-libaudio-library.md](13-libaudio-library.md) | libaudio alSyn/alSeqp/alSndp |
+| [14-mp2-audio-engine-and-assets.md](14-mp2-audio-engine-and-assets.md) | MP2 PlaySound, music, ROM banks |
+| [15-cpu-software-stack-overview.md](15-cpu-software-stack-overview.md) | CPU vs RCP, software layers, frame loop |
+| [16-libultra-os-threads-messaging.md](16-libultra-os-threads-messaging.md) | OS threads, mesg queues, timers |
+| [17-memory-heaps-dma-coherency.md](17-memory-heaps-dma-coherency.md) | Heaps, PI DMA, cache coherency |
+| [18-mp2-cpu-engine-scheduling.md](18-mp2-cpu-engine-scheduling.md) | HuPrc, om overlays, main loop |
 | [call-inventory.md](call-inventory.md) | libultra call counts in main segment |
+| [audio-call-inventory.md](audio-call-inventory.md) | libaudio call counts (auto-generated) |
+| [cpu-call-inventory.md](cpu-call-inventory.md) | OS and engine CPU call counts (auto-generated) |

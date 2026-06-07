@@ -29,7 +29,17 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 | [hardware/08-gbi-rsp-microcode.md](hardware/08-gbi-rsp-microcode.md) | GBI, RSP microcode |
 | [hardware/09-rdp-framebuffers-pixel-formats.md](hardware/09-rdp-framebuffers-pixel-formats.md) | RDP, pixel formats |
 | [hardware/10-vi-display-modes.md](hardware/10-vi-display-modes.md) | Display modes, OSViMode |
+| [hardware/11-audio-pipeline-overview.md](hardware/11-audio-pipeline-overview.md) | Full audio pipeline |
+| [hardware/12-ai-hardware-and-aspMain.md](hardware/12-ai-hardware-and-aspMain.md) | AI, aspMain microcode |
+| [hardware/13-libaudio-library.md](hardware/13-libaudio-library.md) | libaudio library |
+| [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md) | MP2 audio engine |
+| [hardware/15-cpu-software-stack-overview.md](hardware/15-cpu-software-stack-overview.md) | CPU software stack |
+| [hardware/16-libultra-os-threads-messaging.md](hardware/16-libultra-os-threads-messaging.md) | libultra OS threads |
+| [hardware/17-memory-heaps-dma-coherency.md](hardware/17-memory-heaps-dma-coherency.md) | Heaps, DMA, caches |
+| [hardware/18-mp2-cpu-engine-scheduling.md](hardware/18-mp2-cpu-engine-scheduling.md) | HuPrc and overlays |
 | [hardware/call-inventory.md](hardware/call-inventory.md) | libultra call-site counts (auto-generated) |
+| [hardware/audio-call-inventory.md](hardware/audio-call-inventory.md) | libaudio call-site counts (auto-generated) |
+| [hardware/cpu-call-inventory.md](hardware/cpu-call-inventory.md) | CPU/engine call-site counts (auto-generated) |
 
 ## Subsystem Index
 
@@ -67,4 +77,5 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 - `tools/verify_rom.py` — validates segment coverage and baserom SHA1
 - `tools/hardware_xref.py` — libultra hardware API call inventory from `asm/1060.s`
 - `tools/dump_vi_modes.py` — MP2 OSViMode table dump for doc 10
+- `tools/audio_xref.py` — libaudio API call inventory from `asm/1060.s`
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly

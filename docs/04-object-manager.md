@@ -2,6 +2,8 @@
 
 The **`om`** (object manager) subsystem tracks runtime objects and orchestrates **overlay loading** — swapping 115 ROM modules through the shared VRAM window.
 
+> **Hardware / CPU path:** PI DMA, cache invalidate, and overlay entry are documented in [hardware/17-memory-heaps-dma-coherency.md](hardware/17-memory-heaps-dma-coherency.md) and [hardware/18-mp2-cpu-engine-scheduling.md](hardware/18-mp2-cpu-engine-scheduling.md).
+
 ## Core APIs
 
 | Function | VRAM | Role |

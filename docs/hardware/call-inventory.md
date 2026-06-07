@@ -62,6 +62,42 @@ Call counts are `jal` sites in [`asm/1060.s`](../asm/1060.s) only.
 | Function | VRAM | Calls in main |
 |----------|------|---------------|
 | `osAiGetLength` | `0x8009E2D0` | 1 |
+| `osAiDeviceBusy` | `0x800A86B0` | 1 |
+
+### libaudio — Sequence
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `alSeqpPlay` | `0x8009F840` | 2 |
+| `alSeqpStop` | `0x8009F950` | 8 |
+| `alSeqpSetSeq` | `0x8009F8A0` | 1 |
+| `alSeqpSetBank` | `0x8009F870` | 1 |
+| `alSeqpSetVol` | `0x8009F920` | 8 |
+| `alSeqpSetTempo` | `0x8009F8D0` | 1 |
+
+### libaudio — Sound
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `alSndpPlay` | `0x800A0D30` | 1 |
+| `alSndpStop` | `0x800A0D90` | 6 |
+| `alSndpAllocate` | `0x800A0C10` | 1 |
+| `alSndpSetSound` | `0x800A0D20` | 4 |
+
+### libaudio — Synth
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `alSynStartVoice` | `0x800A19B0` | 1 |
+| `alSynAllocVoice` | `0x800A1750` | 3 |
+| `alAudioFrame` | `0x800A1094` | 0 |
+
+### MP2 Engine Audio
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `PlaySound` | `0x80014B14` | 2 |
+| `PlayCharacterSound` | `0x8007975C` | 3 |
 
 ### Serial / Input / Save (SI)
 
@@ -86,3 +122,20 @@ Call counts are `jal` sites in [`asm/1060.s`](../asm/1060.s) only.
 | `osSetEventMesg` | `0x800A5AF0` | 9 |
 | `osRecvMesg` | `0x800A5890` | 89 |
 | `osSendMesg` | `0x800A59C0` | 55 |
+| `osSetIntMask` | `0x8009D6C0` | 45 |
+| `osGetTime` | `0x800A6540` | 4 |
+| `osSetTimer` | `0x800A65D0` | 2 |
+
+### MP2 CPU Engine
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `InitProcess` | `0x80076E64` | 73 |
+| `SleepProcess` | `0x8007D9E0` | 82 |
+| `SleepVProcess` | `0x8007DA44` | 164 |
+| `ReadMainFS` | `0x80017680` | 79 |
+| `MallocPerm` | `0x80040DA4` | 22 |
+| `MallocTemp` | `0x80040E74` | 44 |
+| `MakeHeap` | `0x80068460` | 3 |
+| `Malloc` | `0x80068480` | 29 |
+| `InitObjSys` | `0x800760C0` | 0 |

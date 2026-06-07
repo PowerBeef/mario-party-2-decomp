@@ -2,6 +2,8 @@
 
 Most game content lives in the ROM **asset tail** (`0x418A50`–`0x1FFFFFF`, ~27 MB).
 
+> **Audio banks and sequences:** For `.bank` / `.seq` layout and libaudio loading, see [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md).
+
 ## MainFS
 
 | Function | VRAM | Role |

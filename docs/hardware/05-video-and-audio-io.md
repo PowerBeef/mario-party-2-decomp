@@ -51,6 +51,8 @@ During overlay fades, **`osViBlack`** blanks output while PI DMA loads the next 
 
 ## Audio Interface (AI)
 
+> **Exhaustive audio docs:** [11-audio-pipeline-overview.md](11-audio-pipeline-overview.md), [12-ai-hardware-and-aspMain.md](12-ai-hardware-and-aspMain.md), [13-libaudio-library.md](13-libaudio-library.md), [14-mp2-audio-engine-and-assets.md](14-mp2-audio-engine-and-assets.md).
+
 ### Role
 
 The AI pulls **PCM samples** from RDRAM via DMA and feeds the **44.1 kHz** (typical) DAC. Playback is **buffered**: while one buffer plays, the CPU fills the next.
@@ -91,5 +93,8 @@ See [06-serial-save-interrupts.md](06-serial-save-interrupts.md) for the full in
 - [07-graphics-pipeline-overview.md](07-graphics-pipeline-overview.md) — Per-frame timeline
 - [04-rcp-rsp-rdp.md](04-rcp-rsp-rdp.md) — Framebuffer production
 - [../08-rendering.md](../08-rendering.md) — Engine graphics
-- [../09-audio.md](../09-audio.md) — PlaySound / PlayMusic API
+- [11-audio-pipeline-overview.md](11-audio-pipeline-overview.md) — Full audio pipeline
+- [12-ai-hardware-and-aspMain.md](12-ai-hardware-and-aspMain.md) — AI and aspMain depth
+- [../09-audio.md](../09-audio.md) — PlaySound / music API
 - [call-inventory.md](call-inventory.md) — VI/AI symbol table
+- [audio-call-inventory.md](audio-call-inventory.md) — libaudio call counts
