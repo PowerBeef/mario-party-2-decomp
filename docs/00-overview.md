@@ -37,9 +37,14 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 | [hardware/16-libultra-os-threads-messaging.md](hardware/16-libultra-os-threads-messaging.md) | libultra OS threads |
 | [hardware/17-memory-heaps-dma-coherency.md](hardware/17-memory-heaps-dma-coherency.md) | Heaps, DMA, caches |
 | [hardware/18-mp2-cpu-engine-scheduling.md](hardware/18-mp2-cpu-engine-scheduling.md) | HuPrc and overlays |
+| [hardware/19-input-save-pipeline-overview.md](hardware/19-input-save-pipeline-overview.md) | Input and save pipeline |
+| [hardware/20-si-controller-hardware.md](hardware/20-si-controller-hardware.md) | SI, controllers, rumble |
+| [hardware/21-eeprom-save-hardware.md](hardware/21-eeprom-save-hardware.md) | EEPROM hardware and protocol |
+| [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md) | MP2 input/save engine |
 | [hardware/call-inventory.md](hardware/call-inventory.md) | libultra call-site counts (auto-generated) |
 | [hardware/audio-call-inventory.md](hardware/audio-call-inventory.md) | libaudio call-site counts (auto-generated) |
 | [hardware/cpu-call-inventory.md](hardware/cpu-call-inventory.md) | CPU/engine call-site counts (auto-generated) |
+| [hardware/input-save-call-inventory.md](hardware/input-save-call-inventory.md) | Input/save call-site counts (auto-generated) |
 
 ## Subsystem Index
 
@@ -78,4 +83,6 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 - `tools/hardware_xref.py` — libultra hardware API call inventory from `asm/1060.s`
 - `tools/dump_vi_modes.py` — MP2 OSViMode table dump for doc 10
 - `tools/audio_xref.py` — libaudio API call inventory from `asm/1060.s`
+- `tools/cpu_xref.py` — libultra OS and MP2 CPU engine call inventory
+- `tools/input_save_xref.py` — SI/EEPROM and input/save call inventory
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly

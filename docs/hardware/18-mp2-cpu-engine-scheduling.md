@@ -113,7 +113,7 @@ Exact function names split across **`1060.s`** and engine C; the **pattern** is 
 | Minigame start | PI DMA overlay, cache invalidate, heap temp init |
 | Minigame play | Process updates, collision, `SleepProcess(1)` |
 | Minigame end | Score upload, `omOvlReturnEx`, temp heap free |
-| Save | `osEeprom*` / SRAM path — see [06-serial-save-interrupts.md](06-serial-save-interrupts.md) |
+| Save | `osEeprom*` — see [19-input-save-pipeline-overview.md](19-input-save-pipeline-overview.md) |
 
 ## Decompression (HVQ)
 

@@ -1,33 +1,45 @@
 # Input and Save
 
-> **Hardware:** SI bus, PIF protocol, EEPROM silicon, and libultra interrupt mapping — [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md).
+> **Hardware deep-dive (input/save sub-series):**
+> - [hardware/19-input-save-pipeline-overview.md](hardware/19-input-save-pipeline-overview.md) — Full pipeline (SI + EEPROM)
+> - [hardware/20-si-controller-hardware.md](hardware/20-si-controller-hardware.md) — PIF, `OSContPad`, rumble
+> - [hardware/21-eeprom-save-hardware.md](hardware/21-eeprom-save-hardware.md) — 4K EEPROM blocks and libultra API
+> - [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md) — Input manager, EEPROM module, checksum
+> - Summary: [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md)
 
 ## Controller Input
 
 Standard libultra controller API:
 
-| Function | Role |
-|----------|------|
-| `osContInit` | Detect controllers |
-| `osContStartReadData` | Begin poll |
-| `osContGetReadData` | Read `OSContPad[4]` |
+| Function | VRAM | Role |
+|----------|------|------|
+| `func_800A2100` | `0x800A2100` | Controller init (detect ports) |
+| `osContStartReadData` | `0x800A1FBC` | Begin poll |
+| `osContGetReadData` | `0x800A1F20` | Read `OSContPad[4]` @ `D_800FA5E0` |
 
-Input is sampled each frame by board/minigame processes. CPU players bypass hardware via `PlayerIsCPU`.
+MP2 wraps polling in the input manager @ **`0x80016BD0`** — processed buttons land in **`D_800D8040`**. Input is sampled each frame by board/minigame processes. CPU players bypass hardware via **`PlayerIsCPU`** @ `0x8005DCA0`.
 
 ## Rumble / Accessories
 
-`osMotorStart` / `osMotorStop` (if present in symbols) drive Pak rumble for minigame feedback.
+| Function | VRAM | Role |
+|----------|------|------|
+| `osMotorInit` | `0x800A7420` | Detect rumble pak |
+| `osMotorAccess` | `0x800A7668` | Drive motor |
+| `func_80016BBC` | `0x80016BBC` | Engine rumble request |
 
 ## EEPROM Save
 
 Mario Party 2 uses **4K EEPROM** (`osEeprom*` APIs in main segment).
 
-| Function | Role |
-|----------|------|
-| `osEepromProbe` | Detect save type |
-| `osEepromRead` / `osEepromWrite` | Block I/O |
-| `osEepromLongRead` / `LongWrite` | Multi-block |
-| `GetSaveFileChecksum` | Validate save |
+| Function | VRAM | Role |
+|----------|------|------|
+| `osEepromProbe` | `0x8009CAD0` | Detect save type |
+| `osEepromRead` / `osEepromWrite` | `0x800A8030` / `0x8009C720` | 8-byte block I/O |
+| `osEepromLongRead` / `LongWrite` | `0x8009CC40` / `0x8009CB50` | Up to 256 bytes |
+| `func_8001ACD0` | `0x8001ACD0` | Load + checksum verify |
+| `func_8001B114` | `0x8001B114` | Byte-sum checksum |
+
+Staging buffer: **`D_800D89F0`** (512 bytes).
 
 ## Save Contents (partial)
 
@@ -35,11 +47,11 @@ Mario Party 2 uses **4K EEPROM** (`osEeprom*` APIs in main segment).
 - Records / unlock flags
 - `GW_PLAYER` aggregates for story mode progress
 
-Exact layout requires further RE of `func_8001B8D0` eeprom module region.
+Exact layout requires further RE of the EEPROM module @ `0x8001ACD0`. See [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md).
 
 ## Checksum
 
-`GetSaveFileChecksum` compares CRC over save blocks before accepting loaded data — prevents corrupted cartridge writes from crashing boot.
+**`func_8001B114`** sums EEPROM payload bytes and compares against header table **`D_800C9B60`** — prevents corrupted cartridge writes from loading invalid party state.
 
 ## Symbol Sources
 

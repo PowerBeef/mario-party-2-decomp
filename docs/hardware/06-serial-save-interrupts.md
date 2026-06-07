@@ -2,6 +2,8 @@
 
 Controllers, EEPROM saves, and how libultra turns hardware IRQs into messages MP2 can poll or wait on.
 
+> **Exhaustive input/save docs:** [19-input-save-pipeline-overview.md](19-input-save-pipeline-overview.md), [20-si-controller-hardware.md](20-si-controller-hardware.md), [21-eeprom-save-hardware.md](21-eeprom-save-hardware.md), [22-mp2-input-save-engine.md](22-mp2-input-save-engine.md).
+
 ## Serial Interface (SI)
 
 The **SI** connects the VR4300 to the **PIF**, which implements the serial bus for:
@@ -34,8 +36,8 @@ flowchart TB
 
 | Function | VRAM | Calls (main) | Role |
 |----------|------|--------------|------|
-| `osContStartReadData` | `0x800A1FBC` | 2 | Begin pad poll |
-| `osContGetReadData` | `0x800A1F20` | 2 | Read `OSContPad` array |
+| `osContStartReadData` | `0x800A1FBC` | 0 | Begin pad poll (often via input manager) |
+| `osContGetReadData` | `0x800A1F20` | 1 | Read `OSContPad` array |
 
 Typical frame loop:
 
@@ -132,6 +134,11 @@ Do not confuse **`SleepProcess`** (engine yield) with **`osStopThread`** (OS pri
 ## Related Docs
 
 - [../10-input-and-save.md](../10-input-and-save.md) — Engine input and save API
+- [19-input-save-pipeline-overview.md](19-input-save-pipeline-overview.md) — Full pipeline
+- [20-si-controller-hardware.md](20-si-controller-hardware.md) — Controller depth
+- [21-eeprom-save-hardware.md](21-eeprom-save-hardware.md) — EEPROM depth
+- [22-mp2-input-save-engine.md](22-mp2-input-save-engine.md) — MP2 managers and globals
 - [../03-process-system.md](../03-process-system.md) — HuPrc scheduling
 - [05-video-and-audio-io.md](05-video-and-audio-io.md) — VI/AI events
-- [call-inventory.md](call-inventory.md) — SI/EEPROM call counts
+- [call-inventory.md](call-inventory.md) — SI/EEPROM symbol table
+- [input-save-call-inventory.md](input-save-call-inventory.md) — Input/save call counts

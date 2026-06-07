@@ -130,6 +130,11 @@ See [02-memory-map.md](02-memory-map.md) for virtual addresses and [03-boot-and-
 | [16-libultra-os-threads-messaging.md](16-libultra-os-threads-messaging.md) | OS threads, mesg queues, timers |
 | [17-memory-heaps-dma-coherency.md](17-memory-heaps-dma-coherency.md) | Heaps, PI DMA, cache coherency |
 | [18-mp2-cpu-engine-scheduling.md](18-mp2-cpu-engine-scheduling.md) | HuPrc, om overlays, main loop |
+| [19-input-save-pipeline-overview.md](19-input-save-pipeline-overview.md) | Input and save pipeline |
+| [20-si-controller-hardware.md](20-si-controller-hardware.md) | SI, PIF, controllers, rumble |
+| [21-eeprom-save-hardware.md](21-eeprom-save-hardware.md) | EEPROM protocol and blocks |
+| [22-mp2-input-save-engine.md](22-mp2-input-save-engine.md) | MP2 input manager and EEPROM module |
 | [call-inventory.md](call-inventory.md) | libultra call counts in main segment |
 | [audio-call-inventory.md](audio-call-inventory.md) | libaudio call counts (auto-generated) |
 | [cpu-call-inventory.md](cpu-call-inventory.md) | OS and engine CPU call counts (auto-generated) |
+| [input-save-call-inventory.md](input-save-call-inventory.md) | Input/save call counts (auto-generated) |

@@ -107,11 +107,19 @@ Call counts are `jal` sites in [`asm/1060.s`](../asm/1060.s) only.
 | `osContGetReadData` | `0x800A1F20` | 1 |
 | `osContRamRead` | `0x800A7820` | 13 |
 | `osContRamWrite` | `0x800A7A10` | 7 |
+| `osMotorInit` | `0x800A7420` | 6 |
+| `osMotorAccess` | `0x800A7668` | 0 |
 | `osEepromProbe` | `0x8009CAD0` | 2 |
 | `osEepromRead` | `0x800A8030` | 1 |
 | `osEepromWrite` | `0x8009C720` | 2 |
 | `osEepromLongRead` | `0x8009CC40` | 2 |
 | `osEepromLongWrite` | `0x8009CB50` | 3 |
+
+### MP2 Input / Save Engine
+
+| Function | VRAM | Calls in main |
+|----------|------|---------------|
+| `PlayerIsCPU` | `0x8005DCA0` | 9 |
 
 ### OS Threads / Events
 
