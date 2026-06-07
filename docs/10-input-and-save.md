@@ -1,5 +1,7 @@
 # Input and Save
 
+> **Hardware:** SI bus, PIF protocol, EEPROM silicon, and libultra interrupt mapping — [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md).
+
 ## Controller Input
 
 Standard libultra controller API:

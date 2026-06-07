@@ -2,6 +2,8 @@
 
 Mario Party 2 uses a **cooperative process scheduler** (Hudson `HuPrc` API) built on **`setjmp`/`longjmp`** context switches rather than preemptive OS threads for gameplay logic.
 
+> **Hardware note:** HuPrc processes are **not** VR4300 hardware threads. libultra OS threads (VI/PI/SI managers) use real exception-based preemption on the same CPU. See [hardware/01-vr4300-cpu.md](hardware/01-vr4300-cpu.md) and [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md).
+
 ## Core Struct: `Process`
 
 See [`include/process.h`](../include/process.h) — 0x90 bytes per process.

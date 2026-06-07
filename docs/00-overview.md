@@ -12,6 +12,21 @@ Mario Party 2 (USA, `NMWE`) is a 32 MB N64 title built on a **Hudson Soft-style 
 IPL (0x40) → Entry (0x1000 / VRAM 0x80000400) → Main init → Title overlay (ovl_62) → Main menu (ovl_63) → …
 ```
 
+## Hardware (N64 Silicon)
+
+For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 hardware:
+
+| Doc | Topic |
+|-----|-------|
+| [hardware/00-system-architecture.md](hardware/00-system-architecture.md) | Block diagram, per-frame data flow |
+| [hardware/01-vr4300-cpu.md](hardware/01-vr4300-cpu.md) | VR4300, caches, TLB, delay slots |
+| [hardware/02-memory-map.md](hardware/02-memory-map.md) | KSEG0 RDRAM layout, overlay window |
+| [hardware/03-boot-and-cartridge.md](hardware/03-boot-and-cartridge.md) | PIF, IPL, PI DMA |
+| [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md) | RSP/RDP, F3DEX/GS2DEX |
+| [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md) | VI retrace, AI PCM |
+| [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md) | SI, EEPROM, IRQ model |
+| [hardware/call-inventory.md](hardware/call-inventory.md) | libultra call-site counts (auto-generated) |
+
 ## Subsystem Index
 
 | Doc | Topic |
@@ -46,4 +61,5 @@ IPL (0x40) → Entry (0x1000 / VRAM 0x80000400) → Main init → Title overlay 
 - `tools/scan_overlays.py` — rebuilds `marioparty2.yaml` from ROM table at `0xC9474`
 - `tools/sym_converter.py` — imports PartyPlanner64 `.sym` names into `symbol_addrs.txt`
 - `tools/verify_rom.py` — validates segment coverage and baserom SHA1
+- `tools/hardware_xref.py` — libultra hardware API call inventory from `asm/1060.s`
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly
