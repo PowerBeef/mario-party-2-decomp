@@ -148,3 +148,12 @@ See [02-memory-map.md](02-memory-map.md) for virtual addresses and [03-boot-and-
 | [30-rng-and-game-randomness.md](30-rng-and-game-randomness.md) | PRNG |
 | [31-unused-libultra-leo-64dd.md](31-unused-libultra-leo-64dd.md) | Unused Leo/64DD code |
 | [overlay-call-inventory.md](overlay-call-inventory.md) | Overlay call counts (auto-generated) |
+| [32-engine-integration-overview.md](32-engine-integration-overview.md) | Integration atlas hub |
+| [33-boot-to-first-frame.md](33-boot-to-first-frame.md) | Boot → first overlay |
+| [34-main-thread-frame-loop.md](34-main-thread-frame-loop.md) | Frame loop |
+| [35-overlay-load-lifecycle.md](35-overlay-load-lifecycle.md) | Overlay load |
+| [36-graphics-engine-integration.md](36-graphics-engine-integration.md) | Graphics integration |
+| [37-audio-engine-integration.md](37-audio-engine-integration.md) | Audio integration |
+| [38-input-save-engine-integration.md](38-input-save-engine-integration.md) | Input/save integration |
+| [39-asset-to-gpu-bridge.md](39-asset-to-gpu-bridge.md) | Asset→GPU |
+| [engine-integration-map.md](engine-integration-map.md) | Integration edges (auto-generated) |

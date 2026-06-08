@@ -55,6 +55,15 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 | [hardware/30-rng-and-game-randomness.md](hardware/30-rng-and-game-randomness.md) | GetRandomByte PRNG |
 | [hardware/31-unused-libultra-leo-64dd.md](hardware/31-unused-libultra-leo-64dd.md) | Leo/64DD dead code, Expansion Pak |
 | [hardware/overlay-call-inventory.md](hardware/overlay-call-inventory.md) | Overlay API call counts (auto-generated) |
+| [hardware/32-engine-integration-overview.md](hardware/32-engine-integration-overview.md) | Engine ↔ libultra ↔ hardware hub |
+| [hardware/33-boot-to-first-frame.md](hardware/33-boot-to-first-frame.md) | Boot through first overlay |
+| [hardware/34-main-thread-frame-loop.md](hardware/34-main-thread-frame-loop.md) | Main thread frame loop |
+| [hardware/35-overlay-load-lifecycle.md](hardware/35-overlay-load-lifecycle.md) | Overlay PI DMA lifecycle |
+| [hardware/36-graphics-engine-integration.md](hardware/36-graphics-engine-integration.md) | Graphics DL → RSP → VI |
+| [hardware/37-audio-engine-integration.md](hardware/37-audio-engine-integration.md) | PlaySound → AI path |
+| [hardware/38-input-save-engine-integration.md](hardware/38-input-save-engine-integration.md) | SI input + EEPROM |
+| [hardware/39-asset-to-gpu-bridge.md](hardware/39-asset-to-gpu-bridge.md) | MainFS → GPU bridge |
+| [hardware/engine-integration-map.md](hardware/engine-integration-map.md) | Engine→libultra edges (auto-generated) |
 
 ## Subsystem Index
 
@@ -96,4 +105,5 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 - `tools/cpu_xref.py` — libultra OS and MP2 CPU engine call inventory
 - `tools/input_save_xref.py` — SI/EEPROM and input/save call inventory
 - `tools/overlay_xref.py` — engine/libultra call inventory across 115 overlays
+- `tools/engine_integration_map.py` — engine→libultra integration map with HW tags
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly

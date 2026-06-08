@@ -23,6 +23,8 @@ Disassembly: [`asm/entrypoint.s`](../asm/entrypoint.s), [`asm/1060.s`](../asm/10
 
 Matched C for menu bootstrap: [`src/overlays/ovl_63_MainMenu/3E4250.c`](../src/overlays/ovl_63_MainMenu/3E4250.c).
 
+> **Integration deep-dive:** [hardware/33-boot-to-first-frame.md](hardware/33-boot-to-first-frame.md), [hardware/34-main-thread-frame-loop.md](hardware/34-main-thread-frame-loop.md)
+
 ## Global Pointers Initialized Early
 
 | Variable | VRAM | Set by |

@@ -8,6 +8,8 @@ Most game content lives in the ROM **asset tail** (`0x418A50`–`0x1FFFFFF`, ~27
 > - [hardware/25-mainfs-form-mtnx.md](hardware/25-mainfs-form-mtnx.md) — MainFS layout, FORM/MTNX parsers
 >
 > **Audio banks and sequences:** [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md).
+>
+> **Integration deep-dive:** [hardware/39-asset-to-gpu-bridge.md](hardware/39-asset-to-gpu-bridge.md)
 
 ## MainFS
 

@@ -10,6 +10,7 @@ Mario Party 2 renders with **F3DEX microcode** (GBI 2) plus **GS2DEX** for 2D sp
 > - Summaries: [hardware/04-rcp-rsp-rdp.md](hardware/04-rcp-rsp-rdp.md), [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md)
 > - [hardware/29-fade-and-transitions.md](hardware/29-fade-and-transitions.md) — 15 fade types, InitFadeIn/Out
 > - [hardware/28-text-and-messaging.md](hardware/28-text-and-messaging.md) — Message box draw path
+> - [hardware/36-graphics-engine-integration.md](hardware/36-graphics-engine-integration.md) — Engine graphics integration atlas
 
 ## Pipeline Overview
 

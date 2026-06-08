@@ -2,6 +2,8 @@
 
 Minigames are **self-contained overlays** loaded into VRAM **`0x80102800`** for the duration of a round.
 
+> **Integration deep-dive:** [hardware/35-overlay-load-lifecycle.md](hardware/35-overlay-load-lifecycle.md), [hardware/34-main-thread-frame-loop.md](hardware/34-main-thread-frame-loop.md)
+
 ## Lifecycle
 
 1. **Selection** — `ovl_6C_MinigameSelect` or board flow sets `GwSystem.chosenMinigameIndex`.

@@ -8,6 +8,7 @@ Audio combines **sequenced music** (libaudio sequence player) with **sample SFX*
 > - [hardware/13-libaudio-library.md](hardware/13-libaudio-library.md) — alSyn, alSeqp, alSndp, processing graph
 > - [hardware/14-mp2-audio-engine-and-assets.md](hardware/14-mp2-audio-engine-and-assets.md) — PlaySound path, music, ROM banks
 > - Summary: [hardware/05-video-and-audio-io.md](hardware/05-video-and-audio-io.md)
+> - **Integration deep-dive:** [hardware/37-audio-engine-integration.md](hardware/37-audio-engine-integration.md)
 
 ## Key Functions
 

@@ -6,6 +6,7 @@
 > - [hardware/21-eeprom-save-hardware.md](hardware/21-eeprom-save-hardware.md) — 4K EEPROM blocks and libultra API
 > - [hardware/22-mp2-input-save-engine.md](hardware/22-mp2-input-save-engine.md) — Input manager, EEPROM module, checksum
 > - [hardware/27-eeprom-save-byte-layout.md](hardware/27-eeprom-save-byte-layout.md) — Staging buffer byte map
+> - **Integration deep-dive:** [hardware/38-input-save-engine-integration.md](hardware/38-input-save-engine-integration.md)
 > - Summary: [hardware/06-serial-save-interrupts.md](hardware/06-serial-save-interrupts.md)
 
 ## Controller Input

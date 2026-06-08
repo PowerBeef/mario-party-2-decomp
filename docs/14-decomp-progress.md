@@ -19,6 +19,8 @@ Last updated: automated first-pass bootstrap.
 | asset bin tail | ~29 MB (87.2%) |
 | C matched | In progress |
 
+Integration reference (asm-based): [hardware/32-engine-integration-overview.md](hardware/32-engine-integration-overview.md) — engine ↔ libultra ↔ hardware atlas docs **32–39**.
+
 ## Matched / In-Progress C
 
 | Module | File | Status |

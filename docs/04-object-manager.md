@@ -3,6 +3,8 @@
 The **`om`** (object manager) subsystem tracks runtime objects and orchestrates **overlay loading** — swapping 115 ROM modules through the shared VRAM window.
 
 > **Hardware / CPU path:** PI DMA, cache invalidate, and overlay entry are documented in [hardware/17-memory-heaps-dma-coherency.md](hardware/17-memory-heaps-dma-coherency.md) and [hardware/18-mp2-cpu-engine-scheduling.md](hardware/18-mp2-cpu-engine-scheduling.md).
+>
+> **Integration deep-dive:** [hardware/35-overlay-load-lifecycle.md](hardware/35-overlay-load-lifecycle.md), [hardware/32-engine-integration-overview.md](hardware/32-engine-integration-overview.md)
 
 ## Core APIs
 
@@ -10,9 +12,9 @@ The **`om`** (object manager) subsystem tracks runtime objects and orchestrates 
 |----------|------|------|
 | `InitObjSys` | `0x800760C0` | Create object pool |
 | `omAddObj` | — | Spawn object with update func |
-| `omOvlCallEx` | — | Load overlay + run entry |
-| `omOvlGotoEx` | — | Transition with history push |
-| `omOvlReturnEx` | — | Pop overlay history |
+| `omOvlCallEx` | `0x800771EC` | Load overlay + run entry |
+| `omOvlGotoEx` | `0x800770EC` | Transition with history push |
+| `omOvlReturnEx` | `0x80077160` | Pop overlay history |
 | `omOvlKill` | — | Unload current overlay |
 
 Stub declarations: [`src/engine/om.c`](../src/engine/om.c).
