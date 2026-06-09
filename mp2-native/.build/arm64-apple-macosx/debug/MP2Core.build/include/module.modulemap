@@ -1,0 +1,3 @@
+module MP2Core {
+    header "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/include/MP2Core-Swift.h"
+}

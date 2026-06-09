@@ -106,4 +106,8 @@ For physical CPU, RCP, PI/SI/VI/AI, caches, and TLB — how MP2 uses real N64 ha
 - `tools/input_save_xref.py` — SI/EEPROM and input/save call inventory
 - `tools/overlay_xref.py` — engine/libultra call inventory across 115 overlays
 - `tools/engine_integration_map.py` — engine→libultra integration map with HW tags
+- `tools/generate_overlay_stubs.py` — generate 115 Swift overlay modules for `mp2-native/`
+- `tools/extract_mainfs.py`, `decompress_assets.py`, `parse_form_mtnx.py`, `decode_audio.py`, `bake_metal_assets.py` — native asset pipeline
+- `tools/overlay_regression.py` — overlay port checklist vs catalog
+- [`mp2-native/`](mp2-native/) — Swift + Metal native engine (macOS/iOS)
 - `venv/bin/splat split marioparty2.yaml` — generates `asm/` disassembly

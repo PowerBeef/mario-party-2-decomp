@@ -1,0 +1,3 @@
+module MP2Runtime {
+    header "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Runtime.build/include/MP2Runtime-Swift.h"
+}

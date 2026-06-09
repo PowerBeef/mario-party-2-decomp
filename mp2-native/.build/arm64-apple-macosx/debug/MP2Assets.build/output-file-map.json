@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/primary.swiftdeps"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Assets/AssetCatalog.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/AssetCatalog.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/AssetCatalog.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/AssetCatalog~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/AssetCatalog.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/AssetCatalog.dia"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/primary.swiftdeps"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Platform/FrameClock.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/FrameClock.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/FrameClock.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/FrameClock~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/FrameClock.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/FrameClock.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Platform/InputManager.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/InputManager.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/InputManager.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/InputManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/InputManager.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/InputManager.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Platform/SaveManager.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/SaveManager.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/SaveManager.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/SaveManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/SaveManager.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/SaveManager.dia"
+  }
+}

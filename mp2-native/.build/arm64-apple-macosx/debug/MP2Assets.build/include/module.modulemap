@@ -1,0 +1,3 @@
+module MP2Assets {
+    header "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Assets.build/include/MP2Assets-Swift.h"
+}

@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/primary.swiftdeps"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Core/DecisionTreeVM.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/DecisionTreeVM.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/DecisionTreeVM.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/DecisionTreeVM~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/DecisionTreeVM.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/DecisionTreeVM.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Core/GameProcess.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameProcess.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameProcess.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameProcess~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameProcess.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameProcess.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Core/GameWorld.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameWorld.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameWorld.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameWorld~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameWorld.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/GameWorld.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Core/Heaps.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/Heaps.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/Heaps.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/Heaps~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/Heaps.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/Heaps.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Core/MP2Random.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/MP2Random.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/MP2Random.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/MP2Random~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/MP2Random.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/MP2Random.dia"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Core/OverlayModule.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/OverlayModule.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/OverlayModule.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/OverlayModule~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/OverlayModule.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Core.build/OverlayModule.dia"
+  }
+}

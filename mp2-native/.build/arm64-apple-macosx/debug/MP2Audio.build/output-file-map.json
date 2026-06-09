@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Audio.build/primary.swiftdeps"
+  },
+  "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/Sources/MP2Audio/AudioEngine.swift": {
+    "dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Audio.build/AudioEngine.d",
+    "object": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Audio.build/AudioEngine.swift.o",
+    "swiftmodule": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Audio.build/AudioEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Audio.build/AudioEngine.swiftdeps",
+    "diagnostics": "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Audio.build/AudioEngine.dia"
+  }
+}

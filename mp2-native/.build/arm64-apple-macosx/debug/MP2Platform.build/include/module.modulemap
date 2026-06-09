@@ -1,0 +1,3 @@
+module MP2Platform {
+    header "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Platform.build/include/MP2Platform-Swift.h"
+}

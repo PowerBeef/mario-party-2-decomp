@@ -1,0 +1,3 @@
+module MP2Overlays {
+    header "/Users/patricedery/Coding_Projects/mario_party_2/mp2-native/.build/arm64-apple-macosx/debug/MP2Overlays.build/include/MP2Overlays-Swift.h"
+}
